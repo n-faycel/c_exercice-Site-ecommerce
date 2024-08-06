@@ -1,9 +1,8 @@
-# app.py
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/products_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@db/products_db'
 db = SQLAlchemy(app)
 
 class Product(db.Model):
