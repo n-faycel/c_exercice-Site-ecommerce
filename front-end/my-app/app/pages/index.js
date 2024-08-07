@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './page';  
+import Home from '../page';  
 import Register from './register';  
 
 
