@@ -26,6 +26,9 @@ export default function Products() {
   return (
     <section className="bg-gray-50 dark:bg-gray-900 mx-auto md:h-screen">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="absolute top-0 right-0 p-4">
+          <svg className="h-8 w-8 text-orange-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="9" cy="19" r="2" />  <circle cx="17" cy="19" r="2" />  <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" /></svg>
+        </div>
         <h1 className="text-center text-3xl font-extrabold text-gray-900 dark:text-white mb-10">
           Liste des produits :
         </h1>

@@ -1,8 +1,17 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const { sequelize, Order } = require('./sequelize');
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:4050',
+  methods: ['GET', 'POST', 'PUT'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.use(bodyParser.json());
+
 app.use(bodyParser.json());
 
 sequelize.sync({ force: true }).then(() => {
