@@ -1,8 +1,16 @@
 const express = require("express");
+const cors = require('cors');
 const bodyParser = require("body-parser");
 const { sequelize, Product } = require("./sequelize");
 
 const app = express();
+
+app.use(cors({
+  origin: 'http://localhost:4050',  
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(bodyParser.json());
 
 sequelize.sync({ force: true }).then(() => {
@@ -46,6 +54,6 @@ app.delete("/api/products/:id", async (req, res) => {
   }
 });
 
-app.listen(6000, () => {
-  console.log("Product service is running on port 6000");
+app.listen(5000, () => {
+  console.log("Product service is running on port 5000");
 });
