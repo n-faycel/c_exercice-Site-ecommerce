@@ -5,11 +5,10 @@ const { sequelize, Order } = require('./sequelize');
 
 const app = express();
 
-// Configuration CORS
 app.use(cors({
-  origin: 'http://localhost:4050',  // Autoriser cette origine
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Autoriser ces méthodes
-  allowedHeaders: ['Content-Type', 'Authorization']  // Autoriser ces en-têtes
+  origin: 'http://localhost:4050',
+  methods: ['GET', 'POST', 'PUT'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(bodyParser.json());
 
