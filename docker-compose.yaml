@@ -76,5 +76,11 @@ services:
     ports:
       - "6000:6000"
 
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "9000:9000"   
+
 volumes:
   pgdata:
