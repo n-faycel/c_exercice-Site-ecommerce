@@ -1,9 +1,10 @@
-const express = require("express");
 const cors = require('cors');
 const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { sequelize, User, Address } = require("./sequelize");
+import express from "express";
+import {open} from "node:fs/promises"
 
 const app = express();
 
@@ -14,7 +15,9 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'] 
 }));
 app.use(bodyParser.json());
+let filehandle;
 
+filehandle = open('')
 sequelize.sync({ force: true }).then(() => {
   console.log("Database & tables created!");
 });
